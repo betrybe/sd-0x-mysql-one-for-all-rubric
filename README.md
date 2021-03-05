@@ -79,7 +79,7 @@ Você receberá uma tabela não normalizada, a qual deverá ser normalizada e po
 
 ## Desenvolvimento
 
-Normalize uma tabela na terceira forma normal e acesse as informações desta tabbela através de `queries` utilizando `SQL`.
+Normalize uma tabela na terceira forma normal e acesse as informações desta tabela através de `queries` utilizando `SQL`.
 
 ## Data de Entrega
 
