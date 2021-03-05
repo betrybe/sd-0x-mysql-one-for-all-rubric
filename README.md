@@ -318,6 +318,22 @@ VALUES
   ('exemplo de dados 2', 'exemplo de dados Y');
 ```
 
+O que será verificado:
+
+- Será validado se os planos estão na tabela normalizada.
+
+- Será validado se o histórico de reprodução está na tabela normalizada.
+
+- Será validado se as informações osbre pessoas seguindo artistas estão na tabela normalizada.
+
+- Será validado se os álbuns estão na tabela normalizada.
+
+- Será validado se os canções estão na tabela normalizada.
+
+- Será validado se as informações sobre pessoas usuárias estão na tabela normalizada.
+
+- Será validado se as informações sobre pessoas artistas estão na tabela normalizada.
+
 ⚠️ Note que uma vez executado um teste, a sua base de dados `SpotifyClone` **será dropada**. Logo, **se atente** a salvar seu progresso nos arquivos de desafio! ⚠️
 
 ---
@@ -336,6 +352,10 @@ Sua `VIEW` deve retornar a seguinte informação ao ser consultada:
 
 ![Estatísticas musicais](./images/estatisticas_musicais.png)
 
+O que será verificado:
+
+- Será validado se existe uma `VIEW` chamada `estatisticas_musicais` que exibe os dados corretos nas colunas **cancoes**, **artistas** e **albuns**".
+
 ---
 
 ## Desafio 3
@@ -351,6 +371,12 @@ Os resultados devem estar ordenados por nome da pessoa usuária em ordem alfabé
 Sua `VIEW` deve retornar a seguinte informação, ao ser consultada:
 
 ![Histórico de reprodução das pessoas usuárias](./images/HistoricoReproducaoUsuarios.png)
+
+O que será verificado:
+
+- Será validado se existe uma `VIEW` chamada `historico_reproducao_usuarios` que exibe os dados corretos nas colunas **usuario** e **nome**".
+
+- Será validado se as colunas estão ordenadas de forma correta.
 
 ---
 
@@ -368,6 +394,12 @@ Sua `VIEW` deve retornar a seguinte informação, ao ser consultada:
 
 ![Top 3 artistas](./images/top_3_artistas.png)
 
+O que será verificado:
+
+- Será validado se existe uma `VIEW` chamada `top_3_artistas` que exibe os dados corretos nas colunas **artista** e **seguidores**".
+
+- Será validado se as colunas estão ordenadas de forma correta.
+
 ---
 
 ## Desafio 5
@@ -383,6 +415,13 @@ Seu resultado deve estar ordenado em ordem decrescente, baseando-se no número d
 Sua `VIEW` deve retornar a seguinte informação, ao ser consultada:
 
 ![Top 2 hits do momento](./images/top_2_hits_do_momento.png)
+
+
+O que será verificado:
+
+- Será validado se existe uma `VIEW` chamada `top_2_hits_do_momento`, que exibe os dados corretos nas colunas **cancao** e **reproducoes**".
+
+- Será validado se as colunas estão ordenadas de forma correta.
 
 ---
 
@@ -404,6 +443,10 @@ Sua `VIEW` deve retornar a seguinte informação, ao ser consultada:
 
 ![Faturamento atual](./images/faturamento_atual.png)
 
+O que será verificado:
+
+- Será validado se existe uma `VIEW` chamada `faturamento_atual`, que exibe os dados corretos nas colunas **faturamento_minimo**, **faturamento_maximo**, **faturamento_medio** e **faturamento_total**.
+
 ---
 
 ## Desafio 7
@@ -422,6 +465,12 @@ Sua `VIEW` deve retornar a seguinte informação, ao ser consultada:
 
 ![PerfilArtistas](./images/perfil_artistas.png)
 
+O que será verificado:
+
+- Será validado se existe uma `VIEW` chamada `perfil_artistas`, que exibe os dados corretos nas colunas **artista**, **album** e **seguidores**.
+
+- Será validado se as colunas estão ordenadas de forma correta.
+
 ---
 
 ## Desafio 8
@@ -429,6 +478,10 @@ Sua `VIEW` deve retornar a seguinte informação, ao ser consultada:
 Crie uma trigger chamada `trigger_usuario_delete` que deve ser disparada sempre que uma pessoa usuária for excluída do banco de dados, refletindo essa exclusão em todas as tabelas que ela estiver.
 
 Teste a funcionalidade correta de sua trigger, fazendo a exclusão da usuária `"Thati"`.
+
+O que será verificado:
+
+- Será validado se ao excluir uma pessoa usuária do banco de dados a `trigger_usuario_delete` é ativada e a ação de exclusão reflete em todas as tabelas em que esta pessoa está presente.
 
 ---
 
@@ -448,6 +501,12 @@ Confirme a execução correta da procedure, chamando-a e passando o nome igual a
 
 ![Álbuns da pessoa artista](./images/AlbunsDoArtista.png)
 
+O que será verificado:
+
+- Será validado se a procedure `albuns_do_artista` retorna a coluna **artista** contendo o nome da pessoa artista e a coluna **album** contendo o nome do album.
+
+- Será validado se as colunas estão ordenadas de forma correta.
+
 ---
 
 ## Desafio 10
@@ -457,6 +516,11 @@ Crie uma function chamada de `quantidade_musicas_no_historico` que exibe a quant
 Confirme a execução correta da function, chamando-a e passando o id para a pessoa usuária com o nome igual a `"Bill"`. Sua function deve retornar o mesmo que o resultado abaixo:
 
 ![Quantidade de músicas no histórico](./images/quantidade_musicas_no_historico.png)
+
+
+O que será verificado:
+
+- Será validado se a function `quantidade_musicas_no_historico`, ao receber o código identificador de uma pessoa usuária, retorna a quantidade correta de canções presentes no histórico de reprodução desta pessoa.
 
 ---
 
@@ -473,6 +537,12 @@ Crie uma `VIEW` chamada `cancoes_premium` que exiba o nome e a quantidade de vez
 Sua `VIEW` deve retornar a seguinte informação, ao ser consultada:
 
 ![Canções premium](./images/cancoes_premium.png)
+
+O que será verificado:
+
+- Será validado se existe uma `VIEW` chamada `cancoes_premium`, que exibe os dados corretos nas colunas **nome** e **reproducoes**.
+
+- Será validado se as colunas estão ordenadas de forma correta.
 
 ---
 
