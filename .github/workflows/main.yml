@@ -30,7 +30,7 @@ jobs:
         if: steps.wait-for-build.outputs.conclusion == 'success'
         with:
           repository-test-name: 'betrybe/sd-0x-mysql-one-for-all-tests'
-          repository-test-branch: 'master'
+          repository-test-branch: 'lucas-update-tests'
         env:
           MYSQL_USER: 'root'
           MYSQL_PASSWORD: 'password'
