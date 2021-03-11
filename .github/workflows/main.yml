@@ -25,12 +25,12 @@ jobs:
       - uses: actions/checkout@v2
         if: steps.wait-for-build.outputs.conclusion == 'success'
       - name: Evaluator Step
-        uses: betrybe/jest-evaluator-action@v5
+        uses: betrybe/jest-evaluator-action@v7
         id: evaluator
         if: steps.wait-for-build.outputs.conclusion == 'success'
         with:
           repository-test-name: 'betrybe/sd-0x-mysql-one-for-all-tests'
-          repository-test-branch: 'master'
+          repository-test-branch: 'lucas-update-tests'
         env:
           MYSQL_USER: 'root'
           MYSQL_PASSWORD: 'password'
